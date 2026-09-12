@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #07110b;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    text-align: center;
+    padding: 40px 25px;
+    border: 2px solid #24ff75;
+    border-radius: 25px;
+    background: #0d1c12;
+    box-shadow: 0 0 30px #24ff75;
+}
+
+.cockroach {
+    font-size: 80px;
+    animation: move 2s infinite alternate;
+}
+
+h1 {
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.subtitle {
+    color: #9affbd;
+    margin-bottom: 25px;
+}
+
+.status {
+    padding: 15px;
+    border-radius: 12px;
+    background: #12351f;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.message {
+    min-height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#detectBtn {
+    background: #ff3030;
+    color: white;
+}
+
+#resetBtn {
+    background: #24ff75;
+    color: #07110b;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #b7ffc9;
+}
+
+.panic {
+    animation: shake 0.15s infinite;
+    background: #350707;
+}
+
+.panic .container {
+    border-color: red;
+    box-shadow: 0 0 40px red;
+}
+
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(5px, -5px); }
+    50% { transform: translate(-5px, 5px); }
+    75% { transform: translate(5px, 5px); }
+    100% { transform: translate(-5px, -5px); }
+}
+
+@keyframes move {
+    from { transform: translateX(-15px); }
+    to { transform: translateX(15px); }
+}
